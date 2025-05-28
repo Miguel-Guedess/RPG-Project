@@ -57,8 +57,16 @@ public class Attributes {
     @Override
     public String toString() {
         return String.format(
-                "STR: %.0f (Bônus: %.0f) \nDEX: %.0f (Bônus: %.0f) \nCONS: %.0f (Bônus: %.0f)" +
-                        "\nINT: %.0f (Bônus: %.0f) \nSAB: %.0f (Bônus: %.0f) \nCAR: %.0f (Bônus: %.0f)",
+                        "+--------+--------+---------+\n" +
+                        "| ATRIB. | VALOR  | BÔNUS   |\n" +
+                        "+--------+--------+---------+\n" +
+                        "| STR    | %5.1f  | %+6.0f  |\n" +
+                        "| DEX    | %5.1f  | %+6.0f  |\n" +
+                        "| CONS   | %5.1f  | %+6.0f  |\n" +
+                        "| INT    | %5.1f  | %+6.0f  |\n" +
+                        "| WISD   | %5.1f  | %+6.0f  |\n" +
+                        "| CHA    | %5.1f  | %+6.0f  |\n" +
+                        "+--------+--------+---------+",
                 str, getBonus(str), dex, getBonus(dex), cons, getBonus(cons),
                 inl, getBonus(inl), wisd, getBonus(wisd), cha, getBonus(cha));
     }

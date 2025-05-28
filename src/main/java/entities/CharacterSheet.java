@@ -41,9 +41,16 @@ public class CharacterSheet {
         inventory.add(item);
     }
 
-
     @Override
     public String toString() {
-        return "Personagem: " + name + "\n" + attributes.toString() + "\n" + id;
+        return String.format(
+                "Personagem: %s\n" +
+                        "Raça: %s\n" +
+                        "Classe: %s\n" +
+                        attributes +
+                        "\nINVENTARIO" + inventory,
+                        name, race, characterClass);
     }
+
 }
+

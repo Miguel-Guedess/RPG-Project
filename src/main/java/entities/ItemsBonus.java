@@ -19,5 +19,23 @@ public class ItemsBonus {
         public int getInl() { return inl; }
         public int getWisd() { return wisd; }
         public int getCha() { return cha; }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "\n+--------+-------+\n" +
+                        "| ATRIB. | BONUS |\n" +
+                        "+--------+-------+\n" +
+                        "| STR    |  %d    |\n" +
+                        "| DEX    |  %d    |\n" +
+                        "| CONS   |  %d    |\n" +
+                        "| INT    |  %d    |\n" +
+                        "| WISD   |  %d    |\n" +
+                        "| CHA    |  %d    |\n" +
+                        "+--------+-------+",
+                str, dex, cons, inl, wisd, cha
+        );
     }
+
+}
 

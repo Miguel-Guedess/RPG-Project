@@ -46,7 +46,7 @@ public class Main {
             System.out.print("Carisma (CAR): ");
             double cha = sc.nextDouble();
 
-            System.out.printf("Adicione Itens no seu Inventario: (s/n)");
+            System.out.printf("Adicione Itens no seu Inventario (s/n): ");
             String option = sc.next();
 
             while (option.equalsIgnoreCase("s")) {
@@ -56,7 +56,7 @@ public class Main {
                 String itemName = sc.nextLine();
 
                 System.out.print("Descrição do item: ");
-                String itemDesc = sc.nextLine();
+                String description = sc.nextLine();
 
                 System.out.print("Bônus de Força (STR): ");
                 int strBonus = sc.nextInt();
@@ -77,7 +77,7 @@ public class Main {
                 int chaBonus = sc.nextInt();
 
                 ItemsBonus itemBonus = new ItemsBonus(strBonus, dexBonus, consBonus, inlBonus, wisdBonus, chaBonus);
-                Items item = new Items(itemBonus, name);
+                Items item = new Items(itemBonus, name, description);
                 inventory.add(item);
 
                 System.out.print("Adicionar outro item? (s/n): ");
